@@ -1,7 +1,9 @@
 <script>
     import Works from '$lib/pages/works/+page.svelte'
     import About from '$lib/pages/about/+page.svelte'
-
+    import { injectAnalytics } from '@vercel/analytics/sveltekit'
+    import { dev } from '$app/environment'
+    injectAnalytics({ mode: dev ? 'development' : 'production'})
     let currentPage = $state("home")
 </script>
 <div class="main-container">
