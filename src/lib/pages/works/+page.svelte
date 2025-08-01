@@ -114,4 +114,31 @@
     .hidden {
         display: none;
     }
+    @media screen and (max-width: 768px) {
+        .works-container {
+            grid-template-columns: 1fr;
+        }
+        .item1 {
+            grid-column: 1;
+        }
+        .works-card h1, p {
+            margin-right: 1rem;
+        }
+    }
+    @media screen and (min-width: 769px) {
+        .works-container {
+            grid-template-columns: auto auto;
+        }
+        .item1 {
+            grid-column: 1;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .works-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .item1 {
+            grid-column: 1 / span 2;
+        }
+    }
 </style>

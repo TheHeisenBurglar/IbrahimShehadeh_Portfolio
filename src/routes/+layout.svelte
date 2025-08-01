@@ -119,7 +119,7 @@
         font-size: 2.2vw;
     }
     .contact-container {
-        width: 30rem;
+        width: 30vw;
         display: grid;
         background-color: white;
         padding: 1rem;
@@ -156,4 +156,47 @@
         background-color: rgb(230, 114, 84);
         filter: drop-shadow(0.3rem 0.3rem #00000040)
     }
+    @media screen and (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        /* padding: 1rem; */
+        width: 100%;
+    }
+    .navbar h1 {
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .navbar span {
+       display: none;
+    }
+    .nav-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    .nav-btn {
+        font-size: 1.2rem;
+        margin: 0.3rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .section2 {
+        flex-direction: column;
+        /* align-items: flex-start; */
+        gap: 1rem;
+    }
+    .section2 h2 {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .contact-container {
+        width: 80%;
+        padding: 1rem;
+    }
+    .contact-btn {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
 </style>
