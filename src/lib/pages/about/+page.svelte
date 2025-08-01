@@ -2,15 +2,20 @@
     let {currentPage = $bindable()} = $props();
     import logosImg from '$lib/imgs/logos.svg';
     import ibrahimHeadshot from '$lib/imgs/ibrahimshehadeh_headshot.png';
+    import resume from '$lib/resume/IbrahimShehadeh.pdf'
 </script>
 {#if currentPage == "home" || currentPage == "about"}
 <div class="section1">
     <img class="headshot" src={ibrahimHeadshot} />
-    <h1>Ibrahim Shehadeh</h1>
-    <h2>I <strong>BUILD</strong> TOOLS FOR <strong>BUSINESSES, PRODUCTION TEAMS, AND MUNICIPALITIES</strong>
-        USING SVELTE, REACT, NODE, AND POSTGRESQL - AND HELPED CUT <strong>COSTS</strong>, 
-        SPEED THINGS UP, AND <strong>MAKE LIFE EASIER</strong> FOR THE PEOPLE USING THEM.</h2>
-    <button class="about-btn">DOWNLOAD RESUME</button>
+    <div class="about-grid">
+        <h1>Ibrahim Shehadeh</h1>
+        <h2>I <strong>BUILD</strong> TOOLS FOR <strong>BUSINESSES, PRODUCTION TEAMS, AND MUNICIPALITIES</strong>
+            USING SVELTE, REACT, NODE, AND POSTGRESQL - AND HELPED CUT <strong>COSTS</strong>, 
+            SPEED THINGS UP, AND <strong>MAKE LIFE EASIER</strong> FOR THE PEOPLE USING THEM.</h2>
+        <div class="about-btn-container">
+            <button class="about-btn" onclick={() => {window.open(resume)}}>DOWNLOAD RESUME</button>
+        </div>
+    </div>
     <!-- <img src={logosImg} class="logos"/> -->
 </div>
 <div class="section2">
@@ -27,17 +32,19 @@
 {/if}
 <style>
     .section1 {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+        grid-template-rows: auto; */
+        display: flex;
         align-items: center;
         padding: 1vw;
+        gap: 1vw;
         margin: auto;
         /* width: 70vw; */
         color: #ff9176;
     }
     .headshot {
-        width: 30vw;
+        max-width: 50%;
         background-color: #ffffff;
         padding: 1vw;
         /* border: 1rem solid white; */
@@ -54,13 +61,13 @@
         font-weight: 800;
         font-size: 3vw;
         background-color: #ffffff;
-        padding: 1rem 1rem 0 1rem;
-        border-radius: 1rem 1rem 0 0;
+        padding: 2vw 2vw 0 2vw;
+        border-radius: 2vw 2vw 0 0;
     }
     .section1 h2 {
         background-color: #ffffff;
-        padding: 1rem 1rem 1rem 1rem;
-        border-radius: 0 1rem 1rem 1rem;
+        padding: 1rem;
+        border-radius: 0 2vw 2vw 0;
         margin: 0;
         align-self: start;
         font-family: "Crimson Text", serif;
@@ -68,11 +75,15 @@
         font-size: 1.5vw;
         grid-row: 2;
     }
-    .section1 h1, h2, button {
-        grid-column: 2;
-    }
-    .section1 button {
+    .about-grid {
+        display: grid;
         grid-row: 2;
+    }
+    .about-btn-container {
+        background-color: #ffffff;
+        width: fit-content;
+        padding: 2vw;
+        border-radius: 0 0 2vw 2vw;
     }
     .logos {
         grid-row: 2;
@@ -95,11 +106,9 @@
         padding-left: 1.5vw;
         border-radius: 15rem;
         font-family: monospace;
-        font-size: 1.5vw;
-        margin-left: 1rem;
+        font-size: 2vw;
         transition: 200ms;
         align-self: flex-end;
-        margin-bottom: 7vw;
     }
     .about-btn:hover {
         background-color: rgb(230, 114, 84);
@@ -110,10 +119,11 @@
         display: grid;
         grid-template-rows: auto;
         justify-content: center;
-        padding: 1vw;
+        padding: 4vw;
         align-items: center;
-        width: 60vw;
+        width: fit-content;
         margin: auto;
+        margin-bottom: 10vw;
     }
     .section2 p {
         /* width: 50%; */
@@ -129,37 +139,16 @@
         font-weight: 700;
     }
     @media screen and (max-width: 768px) {
-        .headshot{
-            width: 90%;
-        }
-        .section1 {
-            grid-template-rows: auto auto auto;
-        }
         .section1 h1 {
-            width: 100%;
-            font-size: 5vw
+            font-size: 3.4vw
         }
         .section1 h2 {
-            width: 100%;
             font-size: 3vw;
-            border-radius: 0 0 1rem 1rem;
-        }
-        .about-btn {
-            grid-row: 3;
-            margin-bottom: 0;
         }
     }
     @media screen and (min-width: 769px) {
-        .about-btn {
-            margin-bottom: 7vw;
-        }
-        .headshot{
-            width: 100%;
-        }
+
     }
     @media screen and (min-width: 1200px) {
-        .about-btn {
-            margin-bottom: 7vw;
-        }
     }
 </style>

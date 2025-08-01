@@ -1,6 +1,7 @@
 <script>
     import Works from '$lib/pages/works/+page.svelte'
     import About from '$lib/pages/about/+page.svelte'
+    import Contact from '$lib/pages/contact/+page.svelte'
     import { injectAnalytics } from '@vercel/analytics/sveltekit'
     import { dev } from '$app/environment'
     injectAnalytics({ mode: dev ? 'development' : 'production'})
@@ -23,11 +24,13 @@
         <div class="contact-container">
             <p class="contact-title">Let’s get in touch!</p>
             <p class="contact-p">If you’re into building useful tools with good people, add me to your roster.</p>
-            <button class="contact-btn">CONTACT</button>
+            <button class="contact-btn" onclick={()=>{window.open("https://linkedin.com/in/ibrahim-khalil-shehadeh")}}>CONTACT</button>
         </div>
     </div>
     <Works bind:currentPage={currentPage}/>
+    <Contact bind:currentPage={currentPage}/>
     <About bind:currentPage={currentPage}/>
+    
 </div>
 
 
