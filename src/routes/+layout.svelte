@@ -28,8 +28,9 @@
         </div>
     </div>
     <Works bind:currentPage={currentPage}/>
-    <Contact bind:currentPage={currentPage}/>
+    
     <About bind:currentPage={currentPage}/>
+    <Contact bind:currentPage={currentPage}/>
     
 </div>
 
@@ -53,7 +54,7 @@
         padding-right: 8rem;
         padding-left: 8rem;
         font-family: monospace;
-        font-size: 3rem;
+        font-size: 2rem;
         color: #FF9176;
         border: 0.2rem solid #434343;
         border-radius: 15rem;
@@ -85,7 +86,7 @@
         
         border-radius: 15rem;
         font-family: monospace;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         transition: 200ms;
         
     }
@@ -167,7 +168,7 @@
         width: 100%;
     }
     .navbar h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -180,7 +181,7 @@
         margin-top: 0.5rem;
     }
     .nav-btn {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         margin: 0.3rem;
         padding: 0.5rem 0.5rem;
     }
@@ -191,11 +192,17 @@
     }
     .section2 h2 {
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .contact-container {
         width: 80%;
         padding: 1rem;
+    }
+    .contact-title{
+        font-size: 1.2rem;
+    }
+    .contact-p{
+        font-size: 1rem;
     }
     .contact-btn {
         width: 100%;

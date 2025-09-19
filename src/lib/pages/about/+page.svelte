@@ -140,10 +140,19 @@
     }
     @media screen and (max-width: 768px) {
         .section1 h1 {
-            font-size: 3.4vw
+            font-size: 0.8rem
         }
         .section1 h2 {
-            font-size: 3vw;
+            font-size: 0.7rem;
+        }
+        .about-btn {
+            font-size: 0.6rem;
+        }
+        .section2 p {
+            font-size: 1rem;
+        }
+        .section2 strong {
+            font-size: 1.1rem;
         }
     }
     @media screen and (min-width: 769px) {

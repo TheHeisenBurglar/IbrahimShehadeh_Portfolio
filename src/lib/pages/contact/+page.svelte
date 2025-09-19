@@ -6,7 +6,7 @@
     <h2>Email:</h2>
     <p>ibrahim16shehadeh@gmail.com</p>
     <h2 id="linkedIn">LinkedIn:</h2>
-    <a href="https://www.linkedin.com/in/ibrahim-khalil-shehadeh/">https://www.linkedin.com/in/ibrahim-khalil-shehadeh/</a>
+    <a href="https://www.linkedin.com/in/ibrahim-khalil-shehadeh/">linkedin.com/in/ibrahim-khalil-shehadeh/</a>
 </div>
 <style>
     .contact-container {
@@ -62,5 +62,20 @@
     .contact-container a:hover {
         color:#1d4c89;
         text-decoration: wavy;
+    }
+    @media screen and (max-width: 768px) {
+        .contact-container h1 {
+            font-size: 0.6rem;
+        }
+        .contact-container h2{
+            font-size: 0.6rem;
+        }
+        .contact-container p {
+            font-size: 0.6rem;
+        }
+        .contact-container a {
+            font-size: 0.6rem;
+        }
+
     }
 </style>
